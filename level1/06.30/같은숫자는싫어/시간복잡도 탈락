@@ -1,0 +1,11 @@
+def solution(arr):
+  answer=[]
+  i = 0
+  while i != len(arr)-i:
+    if arr[i] == arr[i+1]:
+      del arr[i]
+    else:
+      i += 1
+return arr
+
+# del 함수가 요소하나 지우면서 밀려나가는 연산 값이 복잡도를 높인다고함 개열받음
