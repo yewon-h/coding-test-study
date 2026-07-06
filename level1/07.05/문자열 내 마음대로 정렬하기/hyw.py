@@ -24,7 +24,6 @@ def solution(strings, n):
                 
                 if j_word < i_word:
                     idx_ord[i], idx_ord[j] = idx_ord[j], idx_ord[i]
-                    i_idx = j_idx
                     
             else:
                 break
