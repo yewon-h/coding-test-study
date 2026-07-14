@@ -14,7 +14,7 @@ def solution(N, stages):
             if rem_hum == 0:
                 temp_dic[i] = 0
             else:
-              # 스테이지에 존재하는 사람/ 남은사람
+              # 스테이지에 존재하는 사람/ 남은사람 = 실패율
               # key = 실패율  , value = 스테이지
                 count_hum = stages.count(i)
                 temp_dic[i] = count_hum/rem_hum
