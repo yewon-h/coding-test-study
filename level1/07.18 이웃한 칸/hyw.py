@@ -1,0 +1,20 @@
+def solution(board, h, w):
+    answer = 0
+    n = len(board[0])
+    
+    dh = [0, 1, -1, 0]
+    dw = [1, 0, 0, -1]
+    
+    i = 0
+    while i < 4:
+        h_check = h + dh[i]
+        w_check = w + dw[i]
+        
+        if h_check >= 0 and h_check < n and w_check >= 0 and w_check < n:
+            if board[h][w] == board[h_check][w_check]:
+                answer += 1
+        
+        i += 1
+            
+    
+    return answer
