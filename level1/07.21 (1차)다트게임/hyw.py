@@ -10,7 +10,7 @@ def solution(dartResult):
             scores.append(score) # 첫 점수일 때 0들어가고 이후에는 다음 점수 만날때 이전 [점수 + sdt/*#] 계산결과 넣음
             score = 10 # 앞으로 계산해나갈 점수, score안에서 모두 연산되고 다음 점수 만나면 scores안에 원소로 들어감
             
-        if i.isdigit():
+        if i.isdigit(): # 입력값이 숫자인가?
             scores.append(score)
             score = int(i)
             
