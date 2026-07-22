@@ -29,4 +29,12 @@ def solution(participant, completion):
     for name in p_counter:
         if p_counter[name] != c_counter[name]:
             return name
+
+
+이런식으로 딕셔너리로 묶여서 나온대
+participant = ["leo", "kiki", "eden", "leo"]
+p_counter = Counter(participant)
+
+print(p_counter)
+# 출력 결과: Counter({'leo': 2, 'kiki': 1, 'eden': 1})            
 """
