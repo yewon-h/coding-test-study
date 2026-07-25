@@ -9,14 +9,16 @@ def solution(X, Y):
 
     for i in sorted(countX.keys(), reverse = True):
         if i in countY.keys(): # 공통으로 key존재하면 min(value)만큼 answer에 더해준다
+            # 그냥 너가한것처럼 *로하면 여러번 더해지는지 몰라서 while 써버륌
+            # answer += min(countX[i], countY[i]) * i 하기
             k = 0
-            while k < min(countX[i], countY[i]): # 그냥 너가한것처럼 *로하면 여러번 더해지는지 몰라서 while 써버륌
+            while k < min(countX[i], countY[i]): 
                 answer += i
                 k += 1
                 
-    if answer == '': #아무것도 없으면 -1
+    if answer == '': # 아무것도 없으면 -1
         return '-1'
-    if answer[0] == '0': #문자열 시작이 0이라면 0 
+    if answer[0] == '0': # 문자열 시작이 0이라면 0 
         return '0'
                 
     return answer
